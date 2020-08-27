@@ -1,32 +1,4 @@
-require 'pry'
-
-#my solution
-def list names
-    all_names = names.map do |person|
-        person[:name]
-    end
-    if all_names.count > 2
-        extracted = all_names.each do |names|
-            names
-        end
-        remove_last = (extracted.first extracted.size - 1)
-        join = remove_last.join(", ")
-        puts "#{join} & #{extracted.last}"
-    elsif all_names.count == 2
-        extracted = all_names.each do |names|
-            names
-        end
-        puts extracted.join(" & ")
-    else all_names.count == 1
-        all_names.each do |names|
-            puts "#{names}, Wrong output for a single name"
-        end
-    end
-end
-
-list ([{name: 'Bart'},{name: 'Lisa'},{name: 'Maggie'},{name: 'Homer'}] )
-
-#what was need to pass the tests (p instead of puts)
+#my_solution
 def list names
     all_names = names.map do |person|
         person[:name]
@@ -51,6 +23,8 @@ def list names
         ""
     end
 end
+
+list ([{name: 'Bart'},{name: 'Lisa'},{name: 'Maggie'},{name: 'Homer'}] )
 
 #other solutions
 def list names
