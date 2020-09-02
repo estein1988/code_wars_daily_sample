@@ -15,7 +15,7 @@ def list names
             names
         end
         extracted.join(" & ")
-    else all_names.count == 1
+    elsif all_names.count == 1
         all_names.each do |name|
             return name
         end
@@ -24,7 +24,18 @@ def list names
     end
 end
 
-list ([{name: 'Bart'},{name: 'Lisa'},{name: 'Maggie'},{name: 'Homer'}] )
+#list ([{name: 'Bart'},{name: 'Lisa'}] )
+
+def list_new names
+    all_names = names.map do |person|
+        person[:name]
+    end
+    names = all_names.each do |names|
+        names 
+    end
+end 
+
+list_new ([{name: 'Bart'},{name: 'Lisa'}] )
 
 #other solutions
 def list names
